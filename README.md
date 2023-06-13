@@ -1,9 +1,6 @@
 # Mova Kotlin Android App
-
-<img src="https://github.com/TechnoStudyMobile/Mova/blob/main/Screenshots/logo.png" align="left"
-width="250" hspace="10" vspace="10">
-   
-Mova is a TMDb mobile add that list movies and series, shows their details, you can even watch trailers, save movies to list for watch later</br></br></br></br></br></br></br></br></br></br>
+ 
+Mova is a TMDb mobile add that list movies and series, shows their details, you can even watch trailers, save movies to list for watch later</br></br>
 
 ## 🛠 Built With
 - [MVVM with Clean Architecture](https://www.toptal.com/android/android-apps-mvvm-with-clean-architecture)
