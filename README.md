@@ -5,7 +5,6 @@ width="250" hspace="10" vspace="10">
    
 Mova is a TMDb mobile add that list movies and series, shows their details, you can even watch trailers, save movies to list for watch later</br></br></br></br></br></br></br></br></br></br>
 
-
 ## 🛠 Built With
 - [MVVM with Clean Architecture](https://www.toptal.com/android/android-apps-mvvm-with-clean-architecture)
 - [Coroutines & Flow](https://developer.android.com/kotlin/flow)
@@ -23,12 +22,29 @@ Mova is a TMDb mobile add that list movies and series, shows their details, you 
 - [Youtube Player](https://github.com/PierfrancescoSoffritti/android-youtube-player)
 - [TheMovieDb(Tmdb) API](https://developers.themoviedb.org/3)
 
-
 ## 🎨 Design 
 
 [![Figma](https://img.shields.io/badge/Mova-Figma-black?style=for-the-badge&logo=figma)](https://www.figma.com/file/8qvsQ3FVABSkTFt3jXWiHU/Mova---Movie-Streaming-App-UI-Kit-(Community))
 </br>
 
+## 📷 Light Theme Screenshots
+
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/1.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/2.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/3.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/4.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/5.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/6.png)
+</br>
+
+## 📷 Dark Theme Screenshots
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/1d.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/2d.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/3d.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/4d.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/5d.png)
+![](https://github.com/muratozturk5/Mova/blob/main/Screenshots/6d.png)
+</br>
 
 📄 License 
 -------
