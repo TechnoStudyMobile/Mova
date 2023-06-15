@@ -8,12 +8,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
-import com.muratozturk.mova.common.*
+import com.muratozturk.mova.common.Resource
+import com.muratozturk.mova.common.gone
+import com.muratozturk.mova.common.showToast
+import com.muratozturk.mova.common.viewBinding
+import com.muratozturk.mova.common.visible
 import com.muratozturk.mova.databinding.FragmentLanguageBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import www.sanju.motiontoast.MotionToastStyle
-import java.util.*
+import java.util.Locale
 
 @AndroidEntryPoint
 class LanguageFragment : Fragment(R.layout.fragment_language) {
@@ -29,7 +33,9 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
     fun initUI() {
         with(binding) {
             with(viewModel) {
-
+                backButton.setOnClickListener {
+                    findNavController().popBackStack()
+                }
             }
         }
     }
@@ -58,6 +64,7 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                         when (response) {
                             is Resource.Loading -> {
                             }
+
                             is Resource.Error -> {
                                 requireActivity().showToast(
                                     getString(com.muratozturk.mova.R.string.error),
@@ -66,6 +73,7 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                                 )
 
                             }
+
                             is Resource.Success -> {
                                 languagesRecycler.visible()
 
@@ -92,6 +100,7 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                             is Resource.Loading -> {
                                 languagesRecycler.gone()
                             }
+
                             is Resource.Error -> {
                                 languagesRecycler.gone()
 
@@ -102,6 +111,7 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                                 )
 
                             }
+
                             is Resource.Success -> {
                                 languagesRecycler.visible()
 
