@@ -44,7 +44,7 @@ import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 import kotlin.random.Random
 
 
@@ -307,6 +307,15 @@ fun Context.openShareIntent(text: String) {
             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     )
 }
+
+/**
+ * Opening Url on Device's Browser
+ * @param webPageUrl the url which will navigate
+ */
+fun Context.openWebPage(webPageUrl: String) =
+    Intent(Intent.ACTION_VIEW)
+        .apply { data = Uri.parse(webPageUrl) }
+        .also(::startActivity)
 
 suspend fun Context.imageDownloadSaveFile(photoName: String, url: String): String {
     try {
