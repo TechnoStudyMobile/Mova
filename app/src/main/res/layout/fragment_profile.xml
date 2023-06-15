@@ -251,7 +251,6 @@
                 <ImageView
                     android:layout_width="28dp"
                     app:tint="@color/text_color"
-
                     android:layout_height="28dp"
                     android:src="@drawable/more_circle" />
 

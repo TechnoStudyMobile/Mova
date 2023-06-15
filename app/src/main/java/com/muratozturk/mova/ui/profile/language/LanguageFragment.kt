@@ -1,6 +1,5 @@
 package com.muratozturk.mova.ui.profile.language
 
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -16,21 +15,19 @@ import www.sanju.motiontoast.MotionToastStyle
 import java.util.*
 
 @AndroidEntryPoint
+//Todo: Add back button action
 class LanguageFragment : Fragment(R.layout.fragment_language) {
     private val binding by viewBinding(FragmentLanguageBinding::bind)
     private val viewModel: LanguageViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initUI()
         collectData()
-    }
 
-    fun initUI() {
-        with(binding) {
-            with(viewModel) {
-
-            }
+        binding.backButton.setOnClickListener {
+            val action =
+                LanguageFragmentDirections.actionLanguageFragmentToProfileFragment()
+            findNavController().navigate(action)
         }
     }
 
@@ -39,10 +36,9 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
         viewModel.setLanguageCode(code)
 
         val locale = Locale(code)
-        val config = Configuration()
-        config.setLocale(locale)
         val resources = context?.resources
-        resources?.updateConfiguration(config, resources.displayMetrics)
+        val config = resources?.configuration
+        config?.setLocale(locale)
         requireActivity().recreate()
 
         findNavController().popBackStack()
@@ -64,19 +60,15 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                                     response.throwable.localizedMessage ?: "Error",
                                     MotionToastStyle.ERROR
                                 )
-
                             }
                             is Resource.Success -> {
                                 languagesRecycler.visible()
 
                                 collectLanguages(response.data)
-
                             }
                         }
                     }
                 }
-
-
             }
         }
     }
@@ -114,10 +106,7 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                         }
                     }
                 }
-
-
             }
         }
     }
-
 }

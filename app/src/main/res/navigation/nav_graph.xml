@@ -393,7 +393,15 @@
         android:id="@+id/languageFragment"
         android:name="com.muratozturk.mova.ui.profile.language.LanguageFragment"
         android:label="fragment_language"
-        tools:layout="@layout/fragment_language" />
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
     <dialog
         android:id="@+id/logoutDialogFragment"
         android:name="com.muratozturk.mova.ui.profile.logout.LogoutDialogFragment"
