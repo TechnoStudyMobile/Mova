@@ -24,6 +24,11 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
         super.onViewCreated(view, savedInstanceState)
         initUI()
         collectData()
+
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
     }
 
     fun initUI() {
