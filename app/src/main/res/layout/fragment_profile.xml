@@ -133,7 +133,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Join Premium!"
+                    android:text="@string/join_premium"
                     android:textColor="@color/red"
                     android:textFontWeight="700"
                     android:textSize="20sp" />
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Enjoy watching Full-HD movies, without restrictions and without ads"
+                    android:text="@string/profile_premium_description"
                     android:textFontWeight="500"
                     android:textSize="12dp" />
 
