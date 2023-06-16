@@ -27,6 +27,7 @@ class MovaRepositoryImpl @Inject constructor(
         try {
             val response = remote.getPopularMovies().results.toMovieUI()
 
+
             response.forEach {
                 it.isBookmarked = local.isBookmarked(it.id)
             }
