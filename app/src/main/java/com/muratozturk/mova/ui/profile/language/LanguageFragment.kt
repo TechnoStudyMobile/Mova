@@ -22,18 +22,11 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initUI()
         collectData()
-    }
-
-    fun initUI() {
-        with(binding) {
-            with(viewModel) {
-
-            }
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack()
         }
     }
-
     fun onClick(language: String, code: String) {
         viewModel.setLanguage(language)
         viewModel.setLanguageCode(code)
