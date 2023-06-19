@@ -99,4 +99,6 @@
     <string name="english">English</string>
     <string name="logout_message">Are you sure you want to logout?</string>
     <string name="yes_logout">Yes, Logout</string>
+    <string name="join_premium">Join Premium!</string>
+    <string name="enjoy_watching_full_hd_movies">Enjoy watching Full-HD movies./n without restrictions and without ads</string>
 </resources>
