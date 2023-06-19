@@ -28,4 +28,5 @@
     <color name="second_btn_bg">#fee9eb</color>
     <color name="second_btn_text">#E21221</color>
     <color name="color_off_toggle">#EEEEEE</color>
+    <color name="grey">#616161</color>
 </resources>
