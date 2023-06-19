@@ -1,5 +1,7 @@
 package com.muratozturk.mova.ui.profile
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
@@ -8,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
+import com.muratozturk.mova.common.Constants
 import com.muratozturk.mova.common.Resource
 import com.muratozturk.mova.common.enums.ImageTypeEnum
 import com.muratozturk.mova.common.loadImage
@@ -29,11 +32,20 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         initUI()
     }
 
+
+
     private fun initUI() {
         with(binding) {
             with(viewModel) {
                 getCurrentLanguage()
                 getDarkMode()
+
+                privacyPolicy.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(Constants.PRIVACY_POLICY)
+
+                    startActivity(intent)
+                }
 
                 signOut.setOnClickListener {
                     val action =
