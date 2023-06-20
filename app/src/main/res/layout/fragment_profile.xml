@@ -7,7 +7,6 @@
     android:background="@color/background"
     tools:context=".ui.profile.ProfileFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -44,7 +43,6 @@
             app:layout_constraintStart_toEndOf="@+id/backButton"
             app:layout_constraintTop_toTopOf="parent" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -66,7 +64,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/profile" />
     </com.google.android.material.card.MaterialCardView>
-
 
     <TextView
         android:id="@+id/displayNameTv"
@@ -196,7 +193,6 @@
                     android:textFontWeight="600"
                     android:textSize="16sp" />
 
-
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
@@ -228,8 +224,6 @@
                     android:textColor="@color/text_color"
                     android:textFontWeight="600"
                     android:textSize="16sp" />
-
-
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
@@ -262,7 +256,6 @@
                     android:textFontWeight="600"
                     android:textSize="16sp" />
 
-
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
@@ -282,7 +275,6 @@
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-
                     android:src="@drawable/shield_done"
                     app:tint="@color/text_color" />
 
@@ -295,7 +287,6 @@
                     android:textColor="@color/text_color"
                     android:textFontWeight="600"
                     android:textSize="16sp" />
-
 
                 <ImageView
                     android:layout_width="28dp"
@@ -317,7 +308,6 @@
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
-
                     android:src="@drawable/more_circle"
                     app:tint="@color/text_color" />
 
@@ -361,7 +351,6 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/dark_theme"
-
                     app:tint="@color/text_color" />
 
                 <TextView
@@ -373,7 +362,6 @@
                     android:textColor="@color/text_color"
                     android:textFontWeight="600"
                     android:textSize="16sp" />
-
 
                 <CheckBox
                     android:id="@+id/darkModeToggle"
@@ -398,7 +386,6 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/_nfo_square"
-
                     app:tint="@color/text_color" />
 
                 <TextView
@@ -410,7 +397,6 @@
                     android:textColor="@color/text_color"
                     android:textFontWeight="600"
                     android:textSize="16sp" />
-
 
                 <ImageView
                     android:layout_width="28dp"
@@ -432,7 +418,6 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/danger_square"
-
                     app:tint="@color/text_color" />
 
                 <TextView
@@ -478,7 +463,6 @@
                     android:textColor="@color/red"
                     android:textFontWeight="600"
                     android:textSize="16sp" />
-
 
                 <ImageView
                     android:layout_width="28dp"
