@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
 import com.muratozturk.mova.common.*
 import com.muratozturk.mova.common.enums.ImageTypeEnum
+import com.muratozturk.mova.common.interceptor.WebUtil
 import com.muratozturk.mova.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
