@@ -8,11 +8,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
-import com.muratozturk.mova.common.Resource
+import com.muratozturk.mova.common.*
 import com.muratozturk.mova.common.enums.ImageTypeEnum
-import com.muratozturk.mova.common.loadImage
-import com.muratozturk.mova.common.showToast
-import com.muratozturk.mova.common.viewBinding
 import com.muratozturk.mova.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -58,6 +55,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                         ProfileFragmentDirections.actionProfileFragmentToLanguageFragment()
                     findNavController().navigate(action)
                 }
+                privacyPolicyLayout.setOnClickListener(
+                    WebUtil.openWebPage(requireActivity(), Constants.WEB_URL)
+                )
 
             }
         }
