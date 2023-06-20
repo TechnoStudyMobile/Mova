@@ -8,8 +8,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
+import com.muratozturk.mova.common.Constants
 import com.muratozturk.mova.common.Resource
 import com.muratozturk.mova.common.enums.ImageTypeEnum
+import com.muratozturk.mova.common.WebUtil
 import com.muratozturk.mova.common.loadImage
 import com.muratozturk.mova.common.showToast
 import com.muratozturk.mova.common.viewBinding
@@ -57,6 +59,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     val action =
                         ProfileFragmentDirections.actionProfileFragmentToLanguageFragment()
                     findNavController().navigate(action)
+                }
+
+                privacyPolicyLayout.setOnClickListener {
+                    WebUtil.openBrowserUrl(requireContext(),Constants.PRIVACY_POLICY_URL)
                 }
 
             }
