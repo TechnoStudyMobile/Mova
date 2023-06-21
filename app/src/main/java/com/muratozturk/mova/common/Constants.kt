@@ -4,6 +4,7 @@ object Constants {
 
     const val BASE_URL = "https://api.themoviedb.org/3/"
     const val API_KEY = "2d8356343a8ebcb5b324c3fcffea5706"
+    const val WEB_URL="https://github.com/TchnoStudyMobile/Mova#readme"
     private const val BASE_URL_IMAGE = "https://image.tmdb.org/t/p/original"
     private const val BASE_URL_IMAGE_YOUTUBE = "https://img.youtube.com/vi/"
     private const val SIZE_IMG_YOUTUBE = "/hq720.jpg"
