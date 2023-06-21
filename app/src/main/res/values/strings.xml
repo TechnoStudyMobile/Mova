@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Mova</string>
     <string name="login_image">Login Image</string>
     <string name="lets_you_in">Let\'s you in</string>
@@ -99,4 +99,6 @@
     <string name="english">English</string>
     <string name="logout_message">Are you sure you want to logout?</string>
     <string name="yes_logout">Yes, Logout</string>
+    <string name="join_premiu" tools:ignore="MissingTranslation">Join Premium!</string>
+    <string name="enjoy_watch" tools:ignore="MissingTranslation">Enjoy watching Full-HD movies, without restrictions and without ads</string>
 </resources>
