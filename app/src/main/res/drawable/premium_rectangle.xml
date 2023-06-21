@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- İçi şeffaf -->
+    <solid android:color="@android:color/transparent"/>
+
+    <!-- Kenarlara kırmızı renkte 1dp kalınlığında bir çerçeve ekleyin -->
+    <stroke android:width="2dp" android:color="#FF0000" />
+
+    <!-- Köşeleri 15dp yarıçapında yuvarlayın -->
+    <corners android:radius="30dp" />
+
+    <size
+        android:width="250dp"
+        android:height="110dp" />
+
+</shape>
