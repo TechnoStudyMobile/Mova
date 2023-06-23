@@ -30,10 +30,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         collectData()
         initUI()
+
+
     }
-
-
-
     private fun initUI() {
         with(binding) {
             with(viewModel) {
@@ -50,6 +49,12 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                 signOut.setOnClickListener {
                     val action =
                         ProfileFragmentDirections.actionProfileFragmentToLogoutDialogFragment()
+                    findNavController().navigate(action)
+                }
+
+                 NotifProfile.setOnClickListener {
+                    val action =
+                        ProfileFragmentDirections.actionProfileFragmentToNotificationFragment()
                     findNavController().navigate(action)
                 }
 
@@ -70,7 +75,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                         ProfileFragmentDirections.actionProfileFragmentToLanguageFragment()
                     findNavController().navigate(action)
                 }
-
             }
         }
     }
