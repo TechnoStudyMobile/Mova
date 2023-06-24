@@ -9,25 +9,22 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.muratozturk.mova.R
+import com.muratozturk.mova.common.viewBinding
 import com.muratozturk.mova.databinding.FragmentNotificationBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class NotificationFragment : Fragment() {
+class NotificationFragment : Fragment(R.layout.fragment_notification) {
 
-    private lateinit var binding: FragmentNotificationBinding
+    private val binding by viewBinding(FragmentNotificationBinding::bind)
     private val viewModel: NotificationViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentNotificationBinding.inflate(inflater)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         viewModel.getNotifUi()
         initUi()
         initRecyclerView()
-        return binding.root
     }
 
    private fun initUi() {
@@ -37,7 +34,7 @@ class NotificationFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        viewLifecycleOwner.lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launchWhenCreated {
             viewModel.notifComponent.collect {
                 val adapter = NotificationAdapter(it)
                 binding.recyclerViewNotif.adapter = adapter
