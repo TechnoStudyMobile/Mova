@@ -2,19 +2,17 @@
 
 <ScrollView
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.profile.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/background"
-        >
+        android:background="@color/background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/toolbar"
@@ -102,12 +100,12 @@
             tools:text="example@example.com" />
 
         <LinearLayout
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:id="@+id/premium_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/premium_rectangle"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/emailTv">
@@ -128,8 +126,6 @@
                 android:layout_gravity="center"
                 android:paddingStart="30dp"
                 android:src="@drawable/ic_premium"
-
-
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -144,7 +140,6 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="MissingConstraints" />
-
 
             <TextView
                 android:layout_width="208dp"
@@ -166,13 +161,13 @@
 
         </LinearLayout>
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/nested_scroll_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/premium_id"
-            tools:ignore="NotSibling">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/premium_id"
+        tools:ignore="NotSibling">
 
             <LinearLayout
 
@@ -429,6 +424,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/privacyPolicyLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

@@ -9,7 +9,7 @@ object Constants {
     private const val SIZE_IMG_YOUTUBE = "/hq720.jpg"
     const val NETWORK_PAGE_SIZE = 10
     const val STARTING_PAGE = 1
-
+    const val PRIVACY_POLICY_URL = "https://github.com/TechnoStudyMobile/Mova#readme"
 
     object Preferences {
         const val LANGUAGE_CODE = "languageCode"
