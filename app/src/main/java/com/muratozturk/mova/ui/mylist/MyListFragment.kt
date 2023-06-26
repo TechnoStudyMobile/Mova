@@ -12,6 +12,7 @@ import com.muratozturk.mova.common.enums.MediaTypeEnum
 import com.muratozturk.mova.databinding.FragmentMyListBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import www.sanju.motiontoast.MotionToastStyle
 
 @AndroidEntryPoint
@@ -27,6 +28,7 @@ class MyListFragment : Fragment(R.layout.fragment_my_list) {
     fun initUI() {
         with(viewModel) {
             getBookmarks()
+            getCategoryFilter()
         }
     }
 
@@ -46,10 +48,12 @@ class MyListFragment : Fragment(R.layout.fragment_my_list) {
                                 bookmarksLoading.visible()
                                 bookmarksLoading.startShimmer()
                                 myListRecyclerView.gone()
+                                filterRecyclerView.gone()
                                 emptyList.gone()
                             }
                             is Resource.Error -> {
                                 myListRecyclerView.gone()
+                                filterRecyclerView.gone()
 
                                 requireActivity().showToast(
                                     getString(R.string.error),
@@ -62,14 +66,22 @@ class MyListFragment : Fragment(R.layout.fragment_my_list) {
                                 bookmarksLoading.gone()
                                 bookmarksLoading.stopShimmer()
 
-
                                 if (response.data.isEmpty()) {
                                     myListRecyclerView.gone()
+                                    filterRecyclerView.gone()
                                     emptyList.visible()
 
                                 } else {
                                     myListRecyclerView.visible()
+                                    filterRecyclerView.visible()
                                     emptyList.gone()
+
+                                    launch {
+                                        categoryFilters.collectLatest { categories ->
+                                            val myListCategoryAdapter = MyListCategoryAdapter(categories)
+                                            filterRecyclerView.adapter = myListCategoryAdapter
+                                        }
+                                    }
 
                                     val myListAdapter =
                                         MyListAdapter(response.data)
