@@ -100,4 +100,6 @@
     <string name="english">İngilizce</string>
     <string name="logout_message">Çıkış yapmak istediğinize emin misiniz?</string>
     <string name="yes_logout">Evet, Çıkış yap</string>
+    <string name="join_premium">Premiyuma katıl</string>
+    <string name="enjoy_watching_full_hd_movies">Kısaltmalar ve reklamlar olmadan Full-HD filmler izlemenin keyfini çıkarın</string>
 </resources>
