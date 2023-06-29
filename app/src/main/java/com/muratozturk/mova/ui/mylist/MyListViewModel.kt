@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.muratozturk.mova.common.Resource
 import com.muratozturk.mova.data.model.local.Bookmark
+import com.muratozturk.mova.domain.model.MyListCategoryUI
 import com.muratozturk.mova.domain.use_case.bookmark.GetBookmarksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,9 +21,23 @@ class MyListViewModel @Inject constructor(private val getBookmarksUseCase: GetBo
     val bookmarks
         get() = _bookmarks.asStateFlow()
 
+    private val _categoryFilters = MutableStateFlow<List<MyListCategoryUI>>(mutableListOf())
+    val categoryFilters
+        get() = _categoryFilters.asStateFlow()
+
     fun getBookmarks() = viewModelScope.launch {
         getBookmarksUseCase().collectLatest {
             _bookmarks.emit(it)
         }
     }
+
+    fun getCategoryFilter() = viewModelScope.launch {
+        _categoryFilters.value = getListCategoryFilter()
+    }
+
+    private fun getListCategoryFilter(): List<MyListCategoryUI> = mutableListOf(
+        MyListCategoryUI("Tüm Kategoriler" , true),
+        MyListCategoryUI("Filmler"),
+            MyListCategoryUI("TV Dizileri")
+    )
 }

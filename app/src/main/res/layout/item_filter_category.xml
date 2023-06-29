@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categoryCheckBox"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/radio_flat_selector"
+    android:button="@android:color/transparent"
+    android:fontFamily="@font/urbanist_medium"
+    android:paddingHorizontal="20dp"
+    android:textColor="@drawable/radio_flat_text_selector"
+    android:textSize="16sp"
+    tools:text="Lorem Ipsum"
+    android:textFontWeight="600"/>
