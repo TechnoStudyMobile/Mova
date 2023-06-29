@@ -102,4 +102,10 @@
     <string name="yes_logout">Evet, Çıkış yap</string>
     <string name="join_premium">Premium Al!</string>
     <string name="enjoy_watching_full_hd_movies_without_restrictions_and_without_ads">Full-HD filmleri kısıtlama olmadan ve reklamsız izlemenin keyfini çıkarın.</string>
+    <string name="general_notification">Genel Bildirimler</string>
+    <string name="new_arrival">Yeni Gelen</string>
+    <string name="new_services_available">Yeni Eklenen Servisler</string>
+    <string name="new_releases_movie">Yeni Cikan Filmler</string>
+    <string name="app_updates">Uygulama Guncellemeleri</string>
+    <string name="subscription">Abonelik</string>
 </resources>

@@ -101,4 +101,12 @@
     <string name="yes_logout">Yes, Logout</string>
     <string name="join_premium">Join Premium!</string>
     <string name="enjoy_watching_full_hd_movies_without_restrictions_and_without_ads">Enjoy watching Full-HD movies, without restrictions and without ads</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="general_notification">General Notification</string>
+    <string name="new_arrival">New Arrival</string>
+    <string name="new_services_available">New Services Available</string>
+    <string name="new_releases_movie">New Realeses Movie</string>
+    <string name="app_updates">App Updates</string>
+    <string name="subscription">Subscription</string>
 </resources>

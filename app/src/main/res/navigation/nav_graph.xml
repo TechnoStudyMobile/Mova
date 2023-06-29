@@ -154,6 +154,13 @@
         <action
             android:id="@+id/action_profileFragment_to_logoutDialogFragment"
             app:destination="@id/logoutDialogFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <dialog
         android:id="@+id/dialogFragment"
@@ -417,4 +424,9 @@
             app:popExitAnim="@anim/pop_exit"
             app:popUpToInclusive="true" />
     </dialog>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.muratozturk.mova.ui.profile.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
 </navigation>
