@@ -40,6 +40,13 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                 getCurrentLanguage()
                 getDarkMode()
 
+                premiumCv.setOnClickListener {
+                    val action =
+                        ProfileFragmentDirections.actionProfileFragmentToSubscribeFragment()
+                    findNavController().navigate(action)
+
+                }
+
                 privacyPolicy.setOnClickListener {
                     val intent = Intent(Intent.ACTION_VIEW)
                     intent.data = Uri.parse(Constants.PRIVACY_POLICY)

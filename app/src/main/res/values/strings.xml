@@ -109,4 +109,12 @@
     <string name="new_releases_movie">New Realeses Movie</string>
     <string name="app_updates">App Updates</string>
     <string name="subscription">Subscription</string>
+    <string name="premiumPriceOne">$9.99</string>
+    <string name="subscribeDescription">Enjoy watching Full-HD movies, without restrictions and without ads</string>
+    <string name="premiumAdvantageOne">Watch all you want. Ad-free.</string>
+    <string name="premiumAdvantageTwo">Allows streaming of 4K.</string>
+    <string name="premiumAdvantageThree"><![CDATA[Video & Audio Quality is Better.]]></string>
+    <string name="premiumPriceTwo">$99.99</string>
+    <string name="premiumTimeOne">/month</string>
+    <string name="premiumTimeTwo">/year</string>
 </resources>
