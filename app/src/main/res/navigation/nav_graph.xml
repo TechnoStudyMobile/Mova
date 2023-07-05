@@ -161,6 +161,9 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_profileFragment_to_subscribeFragment"
+            app:destination="@id/subscribeFragment" />
     </fragment>
     <dialog
         android:id="@+id/dialogFragment"
@@ -429,4 +432,9 @@
         android:name="com.muratozturk.mova.ui.profile.notification.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/subscribeFragment"
+        android:name="com.muratozturk.mova.ui.profile.subscribe.SubscribeFragment"
+        android:label="SubscribeFragment"
+        tools:layout="@layout/fragment_subscribe" />
 </navigation>

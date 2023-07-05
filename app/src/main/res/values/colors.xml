@@ -29,4 +29,6 @@
     <color name="second_btn_text">#E21221</color>
     <color name="color_off_toggle">#EEEEEE</color>
     <color name="color_gray_scale_700">#616161</color>
+    <color name="grayscale_200">#E0E0E0</color>
+
 </resources>
